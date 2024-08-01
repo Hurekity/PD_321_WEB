@@ -1,12 +1,21 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title>Калькулятор</title>
+	<meta charset="utf-8" />
+	<title>Калькулятор</title>
 	<link rel="stylesheet" href="calc.css">
 </head>
+
 <body>
+	<!-- Part for coloring button into red-->
+	<style>
+		#red_button {
+			color: red;
+		}
+	</style>
+	<!-- Part for coloring button into red-->
 	<div class="main_window">
 		<div class="title_bar">
 			<!--<input type="button" class="control_button">-->
@@ -22,6 +31,60 @@
 			<!--<button><img src="img/minimize_button.png"></button>
 			<button><img src="img/maximize_button.png"></button>
 			<button><img src="img/close_button.png"></button>-->
+		</div>
+		<div class="menu_bar">
+			<input type="button" value="Правка" class="menu_bar_button">
+			<input type="button" value="Вид" class="menu_bar_button">
+			<input type="button" value="Справка" class="menu_bar_button">
+		</div>
+		<div class="workspace">
+			<div class="edit_control"><input type="text"></div>
+			<div class="memory_buttons">
+				<input type="button" value="MC">
+				<input type="button" value="MR">
+				<input type="button" value="MS">
+				<input type="button" value="M+">
+			</div>
+			<div class="clear_buttons">
+				<div class="empty"></div>
+				<input type="button" value="Backspace">
+				<input type="button" value="CE">
+				<input type="button" value="C">
+			</div>
+			<div class="digit_buttons">
+				<input type="button" value="7" class="digit_buttons">
+				<input type="button" value="8" class="digit_buttons">
+				<input type="button" value="9" class="digit_buttons">
+				<input type="button" id="red_button" value="/" class="digit_buttons"> <!-- Окраска кнопки-->
+				<input type="button" value="sqrt" class="digit_buttons">
+			</div>
+
+			<!-- Больше похоже на костыль, чем на задание, зато работает.-->
+
+			<div class="digit_buttons_second">
+				<input type="button" value="4" class="digit_buttons">
+				<input type="button" value="5" class="digit_buttons">
+				<input type="button" value="6" class="digit_buttons">
+				<input type="button" id="red_button" value="*" class="digit_buttons"> <!-- Окраска кнопки-->
+				<input type="button" value="%" class="digit_buttons">
+			</div>
+
+			<div class="digit_buttons_third">
+				<input type="button" value="1" class="digit_buttons">
+				<input type="button" value="2" class="digit_buttons">
+				<input type="button" value="3" class="digit_buttons">
+				<input type="button" id="red_button" value="-" class="digit_buttons"> <!-- Окраска кнопки-->
+				<input type="button" value="1/x" class="digit_buttons">
+			</div>
+
+			<div class="digit_buttons_fourth">
+				<input type="button" value="0" class="digit_buttons">
+				<input type="button" value="+/-" class="digit_buttons">
+				<input type="button" value="." class="digit_buttons">
+				<input type="button" id="red_button" value="+" class="digit_buttons"> <!-- Окраска кнопки-->
+				<input type="button" id="red_button"value="=" class="digit_buttons"> <!-- Окраска кнопки-->
+			</div>
+
 		</div>
 	</div>
 </body>
