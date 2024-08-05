@@ -59,16 +59,82 @@
         /*
         let number = prompt("Write a number: ");
         if (number.toString().split("").reverse().join("") == number.toString()) {
-            console.log("It's a palindrome");     // Число в строку, разбитие на элементы массива строк,   
+            alert("It's a palindrome");     // Число в строку, разбитие на элементы массива строк,   
 		} else {                                  // разворот, объеденение элементов, сравнение
-            console.log("It isn't a palondrome");
+            alert("It isn't a palondrome");
         }
         */
 
         // 2.
-        /*
-
+       /*
+       let number = prompt("Write a number: ");
+        if (number == 0) {
+            alert("Write natural number. Zero isn't natural.")
+        }
+        else {
+            let result = 1;
+            while (number) {
+                result *= number--;
+            }
+            alert("Factorial equals to " +result);
+        }
         */
+
+       // 3.
+       /*
+        let base = prompt("Write a base: ");
+        let exponent = prompt("Write a exponent: ");
+        alert("Your expression equals to " + Math.pow(base, exponent));
+        */
+
+        // 4.
+       /*
+        let border = prompt("Write last number of the row: ");
+        let arr = [0, 1];
+		function fibonacci(border) {
+			for (let i = 0; i < border - 3; i++) {
+				let a = arr[i] + arr[i + 1];
+				arr.push(a)
+			}
+            return arr[border - 1];
+        }
+        let result = fibonacci(border);
+        alert("Your row: " + arr);
+        */
+
+       // 5.
+
+       // 6.
+       /*
+        let border = prompt("Write last number of the row: ");
+        let array = [];
+        let n = 0;
+		function isSimple(n) {
+			if (n <= 1) {
+				return false;
+            }
+            if (n == 2 || n == 3) {
+                return true;
+            }
+			if (n % 2 == 0 || n % 3 == 0) {
+				return false;
+			}
+			return true;
+		}
+		function adding(n) {
+			if (isSimple(n)) {
+				array.push(n);
+			}
+		}
+        for (let i = 1; i < border; i++) {
+            ++n;
+            adding(n);    
+        } 
+        alert("Your row: " + array);
+        */
+
+       // 7.
+
 
     </script>
 </body>
