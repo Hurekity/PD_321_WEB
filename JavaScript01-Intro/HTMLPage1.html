@@ -255,7 +255,9 @@
         //}
     </script>
 
+
     <script>
+       /* // Calc 1
         let expression = prompt("Введите арифметическое выражение: ", "22+33");
         document.write(expression + " = ");
         let numbers = expression.split(/[+\-*\/^]/);
@@ -273,10 +275,10 @@
 
         const regexp = /[+\-*\/^]/g;
         let s = [...expression.matchAll(regexp)];
-        document.write(typeof (s));
-        console.log(s[0]);
-        console.log(s[0][0]);
-        debugger;
+        /*  document.write(typeof (s));
+          console.log(s[0]);
+          console.log(s[0][0]); */
+     /*   debugger;
         switch (s[0][0]) {
             case '+': document.write(a + b); break;
             case '-': document.write(a - b); break;
@@ -284,7 +286,28 @@
             case '/': document.write(a / b); break;
             case '^': document.write(a ** b); break;
         }
-        document.write(typeof (s[0][0]));
+          //  document.write(typeof (s[0][0]));
+    </script>
+
+    <script>
+    // Calc 2
+    let expression = prompt("Введите арифметическое выражение: ", "22+33");
+    document.write(expression + " = ");
+    let elements = expression.split(/[+\-*\/^]/);
+    console.log(typeof (elements));
+    console.log(elements);
+        //console.table(numbers);
+    let a = Number(elements[0]);
+    let b = Number(elements[2]);
+
+        switch (elements[1]) {
+    case '+': document.write(a + b); break;
+    case '-': document.write(a - b); break;
+    case '*': document.write(a * b); break;
+    case '/': document.write(a / b); break;
+    case '^': document.write(a ** b); break;
+    }
+    //  document.write(typeof (s[0][0]));
     </script>
 </body>
 </html>
