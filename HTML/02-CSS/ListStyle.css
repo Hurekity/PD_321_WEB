@@ -1,0 +1,40 @@
+﻿body
+{
+    font-size: 125%;
+    font-weight:600;
+}
+ol  {
+    list-style-type: upper-roman;
+    
+}
+ul {
+    list-style-type:lower-latin;
+    color:black;
+}
+#first{
+    color:red;
+}
+#second {
+    color: orange;
+}
+#third {
+    color: darkgreen;
+}
+#fourth {
+    color: dodgerblue;
+}
+#fifth {
+    color: rebeccapurple;
+}
+.sunflower {
+    list-style-image: url(nuke.svg);
+}
+.check {
+    list-style-image: url(check.svg);
+}
+.dogecoin {
+    list-style-image: url(dogecoin.svg);
+}
+.x {
+    list-style-image: url(x.svg);
+}
