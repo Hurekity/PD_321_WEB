@@ -99,10 +99,16 @@ document.body.onload = function tick_timer() {
 	let ss = checkNumber(time.getSeconds());
 	document.getElementById("timer_display").innerHTML = `${hh}:${mm}:${ss}`;
 
-	let yyyy = time.getFullYear();
-	let MM = checkNumber(time.getMonth() + 1);
-	let dd = checkNumber(time.getDate());
-	document.getElementById("date_display").innerHTML = `${yyyy}/${MM}/${dd}`;
+	let checkBoxShowDate = document.getElementById("cbShowDate").checked;
+	if (checkBoxShowDate == true) {
+		let yyyy = time.getFullYear();
+		let MM = checkNumber(time.getMonth() + 1);
+		let dd = checkNumber(time.getDate());
+		document.getElementById("date_display").innerHTML = `${yyyy}/${MM}/${dd}`;
+	}
+	else {
+		document.getElementById("timer_display").innerHTML = "";
+	}
 	setTimeout(tick_timer, 1000);
 }
 function checkNumber(i) {
