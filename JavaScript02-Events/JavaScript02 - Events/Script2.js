@@ -114,3 +114,4 @@ document.body.onload = function tick_timer() {
 function checkNumber(i) {
 	return i < 10 ? "0" + i : i;
 }
+// Alt + Shift + W  - обертка кода в div
