@@ -1,38 +1,28 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Events day 2</title>
-    <link rel="stylesheet" href="StyleSheet2.css" />
+    <link rel="stylesheet" href="StyleSheet2.css">
 </head>
-<body>
+<body class="light">
     <div id="header">
-        <div style="width:98%">Header</div>
-       <img src="img/moon.png" alt="Switch background image" id="background_switch" /> 
+        <div style="width:88%">Header</div>
+        <div><input type="number" min="500" max="8000" step="500" value="500" style="text-align:right" id="bkgDelay"></div>
+        <div id="background_switch"></div>
+        <!--<img src="img/moon.png" alt="Switch background image" id="background_switch">-->
     </div>
 
     <div id="coord"></div>
 
-
-    <div>   
-    <img src="img/DrunkMonkey.jpg" id="image" style="width:246px; height:205px"/>
-    <br />
-    <button id="btnShowHide" style="width:246px;height:75px;font-size:32px;" onclick="setImageVisibilityDelay()">Скрыть</button>
+    <div>
+        <img src="img/DrunkMonkey.jpg" id="image" style="width:246px; height:205px;">
+        <br>
+        <input type="number" id="numDelay" min="100" max="3000" step="100" style="width:123px;height:50px;font-size:24px">
+        <button id="btnShowHide" style="width:123px;height:58px;font-size:24px;" onclick="setImageVisibilityDelay()">Скрыть</button>
     </div>
-    <br />
-   <!--      HW         -->
-   <div class="delay_menu">
-       <p>Change delay</p>
-    <menu>
-        <li><button id="delay_plus" onclick="delay_plus()">+0.1s</button></li>
-        <li><button id="delay_minus"onclick="delay_minus()">&minus;0.1s</button></li>
-    </menu>
-   </div>
-
     <script type="text/javascript" src="Script2.js"></script>
-
-
-
 </body>
 </html>

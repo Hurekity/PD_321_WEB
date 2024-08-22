@@ -1,43 +1,33 @@
-﻿body {
-   /* background-color:#D8D8D8; */
-   transition: background 2s, color 2s;
+﻿﻿body {
+    /*background-color:#D8D8D8;*/
+    transition: background-color 2s, color 2s;
 }
+
 #header {
-    display:flex;   
+    display: flex;
 }
+
 #background_switch {
     width: 24px;
     height: 24px;
-  /*  transition: content 2s;*/
-   /* background-image: url("img/moon.png");
-    transition-duration: 2s;*/
-}
-.light {
-    background:#D8D8D8;
-    color:#323232;
-    
-}
-.light  #background_switch {
-    content: url("img/moon.png");
-}
-.dark {
-    background:#323232;
-    color:#D8D8D8;
-}
-.dark   #background_switch {
-    content: url("img/sun.png");
+    background-size: 24px 24px;
+    transition: background-image 2s;
 }
 
-/*HW*/
-.delay_menu {
-    background-color:burlywood;
-    padding: 1em;
-    border: solid thin black;
-    width: 190px;
-    text-align:center;
+.light {
+    background: #D8D8D8;
+    color: #323232;
 }
-menu {
-    list-style-type: none;
-    display:flex;
-    gap: 1em;
+
+    .light #background_switch {
+        background-image: url("img/moon.png");
+    }
+
+.dark {
+    background: #323232;
+    color: #D8D8D8;
 }
+
+    .dark #background_switch {
+        background-image: url("img/sun.png");
+    }
