@@ -1,6 +1,7 @@
 ﻿// JavaScript source code
 const DARK = "#323232";
 const LIGHT = "#D8D8D8";
+let DELAY = 500; // Задержка появления картинки.
 // body.onload = function () { document.body.style.backgroundColor = LIGHT; }
 background_switch.onclick = function () {
     //let switch_image = document.getElementById("background_switch");
@@ -36,7 +37,8 @@ document.addEventListener("mousemove", function (event) {
 
 //////////////////////////////////////////////////////////////////////////////////////////
 function setImageVisibilityDelay() {
-    setTimeout("setImageVisibility()", 500);
+
+    setTimeout("setImageVisibility()", DELAY);
 }
 
 
@@ -70,4 +72,13 @@ function animText() {
     let id = document.querySelector("#animated");
     id.innerHTML = text.substring(0, i++);
     setTimeout(animText, 100);
+}
+
+function delay_plus() {
+    DELAY += 100;
+}
+
+function delay_minus() {
+    DELAY -= 100;
+    if (DELAY < 0) DELAY = 0; // чтобы задержка не уходила в минус, а то нелогично.
 }

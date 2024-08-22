@@ -27,3 +27,17 @@
 .dark   #background_switch {
     content: url("img/sun.png");
 }
+
+/*HW*/
+.delay_menu {
+    background-color:burlywood;
+    padding: 1em;
+    border: solid thin black;
+    width: 180px;
+    text-align:center;
+}
+menu {
+    list-style-type: none;
+    display:flex;
+    gap: 1em;
+}
