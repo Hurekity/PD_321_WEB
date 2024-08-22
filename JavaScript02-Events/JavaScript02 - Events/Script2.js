@@ -84,3 +84,27 @@ function animText() {
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 let date = new Date();
+let result = "<h3>Дата и время</h3>";
+result += `Полная дата: ${date}<br>`;
+result += `Только дата: ${date.toDateString()}<br>`;
+result += `Только дата: ${date.getFullYear()}.${checkNumber(date.getMonth()+1)}.${checkNumber(date.getDay())}<br>`;
+result += `День: ${date.getDay()}<br>`;
+result += `Только время: ${date.toTimeString()}<br>`;
+document.getElementById("DateAndTime").innerHTML = result;
+
+document.body.onload = function tick_timer() {
+	let time = new Date();
+	let hh = checkNumber(time.getHours());
+	let mm = checkNumber(time.getMinutes());
+	let ss = checkNumber(time.getSeconds());
+	document.getElementById("timer_display").innerHTML = `${hh}:${mm}:${ss}`;
+
+	let yyyy = time.getFullYear();
+	let MM = checkNumber(time.getMonth() + 1);
+	let dd = checkNumber(time.getDate());
+	document.getElementById("date_display").innerHTML = `${yyyy}/${MM}/${dd}`;
+	setTimeout(tick_timer, 1000);
+}
+function checkNumber(i) {
+	return i < 10 ? "0" + i : i;
+}
