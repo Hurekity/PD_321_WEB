@@ -190,29 +190,29 @@ function tickCountdown() {
 	//document.getElementById("result").innerHTML = time_offset.toTimeString();
 
 
-	timestamp = Math.trunc(timestamp / 1000);
-	timestamp *= 1000;
-	// let time_of_day = timestamp % SECONDS_IN_DAY;
+	//timestamp = Math.trunc(timestamp / 1000);
+	//timestamp *= 1000;
+	// let time_of_day = timestamp % MILISECONDS_IN_DAY;
 
 	const DAYS_IN_MONTH = 365 / 12;
-	const SECONDS_IN_MONTH = 86400 * DAYS_IN_MONTH;
-	const SECONDS_IN_WEEK = 86400 * 7;
-	const SECONDS_IN_DAY = 86400;
-	const SECONDS_IN_HOUR = 3600;
-	const SECONDS_IN_MINUTE = 60;
+	const MILISECONDS_IN_MONTH = MILISECONDS_IN_DAY * DAYS_IN_MONTH;
+	const MILISECONDS_IN_WEEK = MILISECONDS_IN_DAY * 7;
+	const MILISECONDS_IN_DAY = MILISECONDS_IN_HOUR*24;
+	const MILISECONDS_IN_HOUR = MILISECONDS_IN_MINUTE*60;
+	const MILISECONDS_IN_MINUTE = 60*1000;
 
 	//const SECONDS_IN_YEAR = 31557600;//SECO
-	const SECONDS_IN_YEAR = SECONDS_IN_DAY * 365 + SECONDS_IN_HOUR * 6;
-	console.log(SECONDS_IN_YEAR);
+	const MILISECONDS_IN_YEAR = MILISECONDS_IN_DAY * 365 + MILISECONDS_IN_HOUR * 6;
+	console.log(MILISECONDS_IN_YEAR);
 
 	let timestamp_in_seconds = Math.floor(timestamp / 1000);
-	let time_of_day = timestamp_in_seconds % SECONDS_IN_DAY;
-	timestamp_in_seconds = Math.floor(timestamp_in_seconds / SECONDS_IN_DAY);
-	timestamp_in_seconds = timestamp_in_seconds * SECONDS_IN_DAY;
+	let time_of_day = timestamp_in_seconds % MILISECONDS_IN_DAY;
+	timestamp_in_seconds = Math.floor(timestamp_in_seconds / MILISECONDS_IN_DAY);
+	timestamp_in_seconds = timestamp_in_seconds * MILISECONDS_IN_DAY;
 
-	let years = Math.floor(timestamp_in_seconds / SECONDS_IN_YEAR);
+	let years = Math.floor(timestamp_in_seconds / MILISECONDS_IN_YEAR);
 	if (years > 0) {
-		timestamp_in_seconds = (timestamp_in_seconds % (years * SECONDS_IN_YEAR));
+		timestamp_in_seconds = (timestamp_in_seconds % (years * MILISECONDS_IN_YEAR));
 		let years_unit = document.getElementById("years_unit");
 		if (years_unit == null) {
 			let display = document.getElementById("display");
@@ -224,10 +224,10 @@ function tickCountdown() {
 		removeTimeBlock("years");
 	}
 
-	let month = Math.floor(timestamp_in_seconds / SECONDS_IN_MONTH);
+	let month = Math.floor(timestamp_in_seconds / MILISECONDS_IN_MONTH);
 	if (month > 0) {
 		let display = document.getElementById("display");
-		timestamp_in_seconds = (timestamp_in_seconds % (month * SECONDS_IN_MONTH));
+		timestamp_in_seconds = (timestamp_in_seconds % (month * MILISECONDS_IN_MONTH));
 		let month_unit = document.getElementById("month_unit");
 		if (month_unit == null) {
 			month_block = createTimeBlock("month", month);
@@ -248,9 +248,9 @@ function tickCountdown() {
 		removeTimeBlock("month");
 	}
 
-	let weeks = Math.floor(timestamp_in_seconds / SECONDS_IN_WEEK);
+	let weeks = Math.floor(timestamp_in_seconds / MILISECONDS_IN_WEEK);
 	if (weeks > 0) {
-		timestamp_in_seconds = (timestamp_in_seconds % (weeks * SECONDS_IN_WEEK));
+		timestamp_in_seconds = (timestamp_in_seconds % (weeks * MILISECONDS_IN_WEEK));
 		let display = document.getElementById("display");
 		let week_unit = document.getElementById("weeks_unit");
 		if (week_unit == null) {
@@ -272,10 +272,10 @@ function tickCountdown() {
 		removeTimeBlock("weeks");
 	}
 
-	let days = Math.floor(timestamp_in_seconds / SECONDS_IN_DAY);
-	let days_in_seconds = days * SECONDS_IN_DAY;
+	let days = Math.floor(timestamp_in_seconds / MILISECONDS_IN_DAY);
+	let days_in_seconds = days * MILISECONDS_IN_DAY;
 	if (days > 0) {
-		timestamp_in_seconds = (timestamp_in_seconds % (days * SECONDS_IN_DAY));
+		timestamp_in_seconds = (timestamp_in_seconds % (days * MILISECONDS_IN_DAY));
 		let days_unit = document.getElementById("days_unit");
 		if (days_unit == null) {
 			let days_block = createTimeBlock("days", days);
@@ -290,9 +290,9 @@ function tickCountdown() {
 	//console.log(timestamp_in_seconds % days_in_seconds);
 
 	let hours = Math.floor(time_of_day / 3600);
-	if (hours > 0) time_of_day = (time_of_day % (hours * SECONDS_IN_HOUR));
+	if (hours > 0) time_of_day = (time_of_day % (hours * MILISECONDS_IN_HOUR));
 
-	let minutes = Math.floor(time_of_day / SECONDS_IN_MINUTE);
+	let minutes = Math.floor(time_of_day / MILISECONDS_IN_MINUTE);
 	if (minutes > 0) time_of_day = (time_of_day % (minutes * 60));
 
 	let seconds = Math.floor(time_of_day);
