@@ -64,6 +64,7 @@ input {
 
 .time_unit {
     font-family:Digital-7;
+   /* font-family: PixelFJVerdana12pt;*/
     font-size: 48px;
     color: blanchedalmond;
     width: 148px;
@@ -88,4 +89,8 @@ input {
 @font-face {
     font-family: Digital-7;
     src:url('fonts/Digital-7.ttf');
+}
+@font-face {
+    font-family: PixelFJVerdana12pt;
+    src: url('fonts/PixelFJVerdana12pt.ttf');
 }
