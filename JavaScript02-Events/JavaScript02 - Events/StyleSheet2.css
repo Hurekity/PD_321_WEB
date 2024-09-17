@@ -63,6 +63,9 @@ input {
 }
 
 .time_unit {
+    font-family:Digital-7;
+    font-size: 48px;
+    color: blanchedalmond;
     width: 148px;
     height: 148px;
     background-color: Highlight;
@@ -81,4 +84,8 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@font-face {
+    font-family: Digital-7;
+    src:url('fonts/Digital-7.ttf');
 }
