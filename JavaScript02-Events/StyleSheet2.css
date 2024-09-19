@@ -63,6 +63,11 @@ input {
 }
 
 .time_unit {
+    font-family: E1234;
+    /*font-family:'Terminator';*/
+    /*font-family:DigitalDream;*/
+    font-size: 48px;
+    color: rgb(200, 0,0);
     width: 148px;
     height: 148px;
     background-color: Highlight;
@@ -82,3 +87,10 @@ input {
     justify-content: center;
     align-items: center;
 }
+
+@font-face {
+    font-family: Digital-7;
+    src: url('fonts/digital-7.ttf');
+}
+
+
