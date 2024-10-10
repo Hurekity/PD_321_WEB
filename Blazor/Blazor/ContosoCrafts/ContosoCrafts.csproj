@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\Models\**" />
+    <Content Remove="wwwroot\Models\**" />
+    <EmbeddedResource Remove="wwwroot\Models\**" />
+    <None Remove="wwwroot\Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\data\" />
+  </ItemGroup>
+
+</Project>
