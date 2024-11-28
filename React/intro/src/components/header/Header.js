@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-function Header()
+import logo from '../../logo.svg';
+function Header(props)
 {
-  let title = "Hello react"
-  let description = "This is my first React app"
+  // let title = "Hello react"
+  // let description = "This is my first React app"
     return(
     <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <h1>{props.title}</h1>
+        <p>{props.description}</p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
